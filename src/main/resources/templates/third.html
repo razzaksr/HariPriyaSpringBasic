@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document with data</title>
+</head>
+<body>
+    <h1>Received data is <span th:text="${mnw}"></span> </h1>
+
+    <p>My experience in MNW is <span th:text="${exp}"></span> </p>
+
+    <h3>
+        My Array values
+        <div th:each="q:${group}">
+            <span th:text="${q}"></span>
+        </div>
+    </h3>
+
+    <ul th:each="x:${pics}">
+        <li th:text="${x}"></li>
+    </ul>
+</body>
+</html>
