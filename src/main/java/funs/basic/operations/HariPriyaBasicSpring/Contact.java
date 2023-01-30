@@ -2,13 +2,28 @@ package funs.basic.operations.HariPriyaBasicSpring;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 // url router
 public class Contact {
+
+    @PostMapping("/pointing")
+    public String reads(@RequestParam("skill") String skill, @RequestParam("exp") int exp){
+        System.out.println("Parameters "+skill+" and "+exp);
+        return "sendBasic";
+    }
+
+    @GetMapping("/peer")
+    public String read(@RequestParam("skill") String skill, @RequestParam("exp") int exp){
+        System.out.println("Parameters "+skill+" and "+exp);
+        return "sendBasic";
+    }
+
+    @GetMapping("/push")
+    public String open(){
+        return "sendBasic";
+    }
 
     @GetMapping("/more")
     public String moreSend(Model model){

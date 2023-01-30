@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sending</title>
+</head>
+<body>
+  <p>Sending Basic Parameters to controller</p>
+  <form th:action="@{'/pointing'}" method="post">
+<!--  <form th:action="@{'/peer'}" method="get">-->
+    <input type="text" name="skill" placeholder="Enter the skill" />
+    <input type="text" name="exp" placeholder="Enter the years of relevant experience " />
+    <input type="submit" value="Send Data" />
+  </form>
+</body>
+</html>
